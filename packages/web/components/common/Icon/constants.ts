@@ -92,6 +92,7 @@ export const iconPaths = {
   'core/chat/QGFill': () => import('./icons/core/chat/QGFill.svg'),
   'core/chat/cancelSpeak': () => import('./icons/core/chat/cancelSpeak.svg'),
   'core/chat/chatFill': () => import('./icons/core/chat/chatFill.svg'),
+  'core/chat/chatFill1': () => import('./icons/core/chat/chatFill1.svg'),
   'core/chat/chatLight': () => import('./icons/core/chat/chatLight.svg'),
   'core/chat/chatLight1': () => import('./icons/core/chat/chatLight1.svg'),
   'core/chat/chatLight2': () => import('./icons/core/chat/chatLight2.svg'),

@@ -90,7 +90,7 @@ const ChatHistorySlider = ({
     () =>
       !activeChatId
         ? //@ts-ignore
-          [{ id: activeChatId, title: t('core.chat.New Chat') }].concat(history)
+        [{ id: activeChatId, title: t('core.chat.New Chat') }].concat(history)
         : history,
     [activeChatId, history, t]
   );
@@ -180,7 +180,7 @@ const ChatHistorySlider = ({
           h={'100%'}
           color={'primary.600'}
           borderRadius={'xl'}
-          leftIcon={<MyIcon name={'core/chat/chatLight'} w={'16px'} />}
+          leftIcon={<MyIcon name={'core/chat/chatLight1'} w={'16px'} />}
           overflow={'hidden'}
           onClick={() => onChangeChat()}
         >
@@ -227,17 +227,17 @@ const ChatHistorySlider = ({
                 bg={item.top ? '#E6F6F6 !important' : ''}
                 {...(item.id === activeChatId
                   ? {
-                      backgroundColor: 'primary.50 !important',
-                      color: 'primary.600'
-                    }
+                    backgroundColor: 'primary.50 !important',
+                    color: 'primary.600'
+                  }
                   : {
-                      onClick: () => {
-                        onChangeChat(item.id);
-                      }
-                    })}
+                    onClick: () => {
+                      onChangeChat(item.id);
+                    }
+                  })}
               >
                 <MyIcon
-                  name={item.id === activeChatId ? 'core/chat/chatFill' : 'core/chat/chatLight'}
+                  name={item.id === activeChatId ? 'core/chat/chatFill1' : 'core/chat/chatLight1'}
                   w={'16px'}
                 />
                 <Box flex={'1 0 0'} ml={3} className="textEllipsis">
@@ -259,32 +259,32 @@ const ChatHistorySlider = ({
                           children: [
                             ...(onSetHistoryTop
                               ? [
-                                  {
-                                    label: item.top ? t('core.chat.Unpin') : t('core.chat.Pin'),
-                                    icon: 'core/chat/setTopLight',
-                                    onClick: () => {
-                                      onSetHistoryTop({ chatId: item.id, top: !item.top });
-                                    }
+                                {
+                                  label: item.top ? t('core.chat.Unpin') : t('core.chat.Pin'),
+                                  icon: 'core/chat/setTopLight',
+                                  onClick: () => {
+                                    onSetHistoryTop({ chatId: item.id, top: !item.top });
                                   }
-                                ]
+                                }
+                              ]
                               : []),
                             ...(onSetCustomTitle
                               ? [
-                                  {
-                                    label: t('common.Custom Title'),
-                                    icon: 'common/customTitleLight',
-                                    onClick: () => {
-                                      onOpenModal({
-                                        defaultVal: item.customTitle || item.title,
-                                        onSuccess: (e) =>
-                                          onSetCustomTitle({
-                                            chatId: item.id,
-                                            title: e
-                                          })
-                                      });
-                                    }
+                                {
+                                  label: t('common.Custom Title'),
+                                  icon: 'common/customTitleLight',
+                                  onClick: () => {
+                                    onOpenModal({
+                                      defaultVal: item.customTitle || item.title,
+                                      onSuccess: (e) =>
+                                        onSetCustomTitle({
+                                          chatId: item.id,
+                                          title: e
+                                        })
+                                    });
                                   }
-                                ]
+                                }
+                              ]
                               : []),
                             {
                               label: t('common.Delete'),
@@ -320,15 +320,15 @@ const ChatHistorySlider = ({
                   alignItems={'center'}
                   {...(item._id === appId
                     ? {
-                        backgroundColor: 'primary.50 !important',
-                        color: 'primary.600'
-                      }
+                      backgroundColor: 'primary.50 !important',
+                      color: 'primary.600'
+                    }
                     : {
-                        onClick: () => {
-                          onChangeApp(item._id);
-                          onClose();
-                        }
-                      })}
+                      onClick: () => {
+                        onChangeApp(item._id);
+                        onClose();
+                      }
+                    })}
                 >
                   <Avatar src={item.avatar} w={'24px'} />
                   <Box ml={2} className={'textEllipsis'}>

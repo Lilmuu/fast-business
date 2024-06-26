@@ -76,12 +76,27 @@ const Login = () => {
       <Flex
         alignItems={'center'}
         justifyContent={'center'}
-        bg={`url('/icon/login-bg.svg') no-repeat`}
         backgroundSize={'cover'}
         userSelect={'none'}
         h={'100%'}
         px={[0, '10vw']}
+        zIndex={20}
+        position={'relative'}
       >
+        <video
+          src="/icon/loginBg.mp4"
+          autoPlay
+          loop
+          muted
+          style={{
+            position: 'absolute',
+            objectFit: 'cover',
+            zIndex: -1,
+            width: '100%',
+            height: '100%'
+          }}
+        >
+        </video>
         <Flex
           flexDirection={'column'}
           w={['100%', 'auto']}
