@@ -178,7 +178,7 @@ const ChatHistorySlider = ({
           variant={'whitePrimary'}
           flex={1}
           h={'100%'}
-          color={'primary.600'}
+          color={'rgba(2, 189, 170, 1)'}
           borderRadius={'xl'}
           leftIcon={<MyIcon name={'core/chat/chatLight1'} w={'16px'} />}
           overflow={'hidden'}
@@ -227,8 +227,8 @@ const ChatHistorySlider = ({
                 bg={item.top ? '#E6F6F6 !important' : ''}
                 {...(item.id === activeChatId
                   ? {
-                    backgroundColor: 'primary.50 !important',
-                    color: 'primary.600'
+                    backgroundColor: 'rgba(51, 189, 170, 0.15) !important',
+                    color: 'rgba(2, 189, 170, 1)'
                   }
                   : {
                     onClick: () => {
@@ -320,8 +320,8 @@ const ChatHistorySlider = ({
                   alignItems={'center'}
                   {...(item._id === appId
                     ? {
-                      backgroundColor: 'primary.50 !important',
-                      color: 'primary.600'
+                      backgroundColor: 'rgba(51, 189, 170, 0.15) !important',
+                      color: 'rgba(2, 189, 170, 1)'
                     }
                     : {
                       onClick: () => {

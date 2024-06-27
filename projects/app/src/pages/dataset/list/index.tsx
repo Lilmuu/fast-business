@@ -143,7 +143,7 @@ const Dataset = () => {
   return (
     <PageContainer
       isLoading={myDatasets.length === 0 && isFetching}
-      insertProps={{ px: [5, '32px'], bg: 'url(/icon/containerBg.png) no-repeat 0 0 / 100% 100%' }}
+      insertProps={{ px: [5, '32px'] }}
     >
       <Flex pt={[4, '44px']} pb={'40px'} alignItems={'center'} justifyContent={'space-between'}>
         {/* url path */}
@@ -155,7 +155,7 @@ const Dataset = () => {
           FirstPathDom={
             <Flex flex={1} alignItems={'center'} display={'flex'} justifyContent={'space-between'}>
               <Flex flexFlow={'column'}>
-                <Box className="textlg" letterSpacing={1} fontSize={'40px'} fontWeight={'bold'}>
+                <Box color={'rgba(2, 189, 170, 1)'} letterSpacing={1} fontSize={'40px'} fontWeight={'bold'}>
                   {t('core.dataset.My Dataset')}
                 </Box>
                 <Box letterSpacing={1} fontSize={'36px'} fontWeight={'bold'}>
@@ -174,13 +174,13 @@ const Dataset = () => {
           }}
         />
         {/* create icon */}
-        {userInfo?.team?.permission.hasWritePer && (
+        {userInfo?.team?.permission?.hasWritePer && (
           <MyMenu
             offset={[-30, 5]}
             width={120}
             Button={
-              <Button variant={'primaryOutline'} px={0} width={'88px'} height={'32px'} background={'linear-gradient(131.62deg, rgba(51, 112, 255, 1) 0%, rgba(130, 168, 255, 1) 100%);'} color={'#fff'} _hover={{
-                background: 'linear-gradient(131.62deg, rgba(51, 112, 255, 1) 0%, rgba(130, 168, 255, 1) 100%);'
+              <Button variant={'primaryOutline'} px={0} width={'88px'} height={'32px'} background={'linear-gradient(131.62deg, rgba(0, 196, 177, 1) 0%, rgba(67, 232, 213, 1) 100%)'} color={'#fff'} _hover={{
+                background: 'linear-gradient(131.62deg, rgba(0, 196, 177, 1) 0%, rgba(67, 232, 213, 1) 100%)'
               }}>
                 <Flex alignItems={'center'} px={'20px'}>
                   <AddIcon mr={2} />
@@ -264,7 +264,7 @@ const Dataset = () => {
               setDragTargetId(undefined);
             }}
             _hover={{
-              borderColor: 'primary.300',
+              borderColor: 'rgba(68, 194, 181, 1)',
               boxShadow: '1.5',
               '& .delete': {
                 display: 'block'

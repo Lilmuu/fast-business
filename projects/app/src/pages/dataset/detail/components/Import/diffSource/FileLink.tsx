@@ -79,11 +79,11 @@ const CustomLinkImport = () => {
         <Box flex={'0 0 100px'} fontSize={'sm'}>
           {t('core.dataset.website.Selector')}
           <Box color={'myGray.500'} fontSize={'sm'}>
-            {feConfigs?.docUrl && (
+            {/* {feConfigs?.docUrl && (
               <Link href={getDocPath('/docs/course/websync/#选择器如何使用')} target="_blank">
                 {t('core.dataset.website.Selector Course')}
               </Link>
-            )}
+            )} */}
           </Box>
         </Box>
         <Input

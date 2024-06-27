@@ -100,15 +100,15 @@ function responseError(err: any) {
   }
   // 有报错响应
   if (err?.code in TOKEN_ERROR_CODE) {
-    clearToken();
+    // clearToken();
 
-    if (
-      !(window.location.pathname === '/chat/share' || window.location.pathname === '/chat/team')
-    ) {
-      window.location.replace(
-        `/login?lastRoute=${encodeURIComponent(location.pathname + location.search)}`
-      );
-    }
+    // if (
+    //   !(window.location.pathname === '/chat/share' || window.location.pathname === '/chat/team')
+    // ) {
+    //   window.location.replace(
+    //     `/login?lastRoute=${encodeURIComponent(location.pathname + location.search)}`
+    //   );
+    // }
 
     return Promise.reject({ message: '无权操作' });
   }
@@ -152,7 +152,7 @@ function request(
 
   return instance
     .request({
-      baseURL: '/api',
+      baseURL: 'http://43.155.168.172:3009/api',
       url,
       method,
       data: ['POST', 'PUT'].includes(method) ? data : null,

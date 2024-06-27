@@ -52,7 +52,7 @@ const WebsiteConfigModal = ({
       <ModalBody>
         <Box fontSize={'sm'} color={'myGray.600'}>
           {t('core.dataset.website.Config Description')}
-          {feConfigs?.docUrl && (
+          {/* {feConfigs?.docUrl && (
             <Link
               href={getDocPath('/docs/course/websync')}
               target="_blank"
@@ -61,7 +61,7 @@ const WebsiteConfigModal = ({
             >
               {t('common.course.Read Course')}
             </Link>
-          )}
+          )} */}
         </Box>
         <Box mt={2}>
           <Box>{t('core.dataset.website.Base Url')}</Box>

@@ -57,14 +57,14 @@ const Tabs = ({ list, size = 'md', activeId, onChange, ...props }: Props) => {
           whiteSpace={'nowrap'}
           {...(activeId === item.id
             ? {
-                color: 'primary.600',
-                cursor: 'default',
-                fontWeight: 'bold',
-                borderBottomColor: 'primary.600'
-              }
+              color: 'rgba(2, 189, 170, 1)',
+              cursor: 'default',
+              fontWeight: 'bold',
+              borderBottomColor: 'rgba(2, 189, 170, 1)'
+            }
             : {
-                cursor: 'pointer'
-              })}
+              cursor: 'pointer'
+            })}
           onClick={() => {
             if (activeId === item.id) return;
             onChange(item.id);

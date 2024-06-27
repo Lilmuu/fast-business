@@ -106,7 +106,7 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
             })}
           ></Input>
         </FormControl>
-        {feConfigs?.docUrl && (
+        {/* {feConfigs?.docUrl && (
           <Flex alignItems={'center'} mt={7} fontSize={'sm'}>
             {t('support.user.login.Policy tip')}
             <Link
@@ -126,21 +126,25 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
               {t('support.user.login.Privacy')}
             </Link>
           </Flex>
-        )}
+        )} */}
 
         <Button
           type="submit"
-          my={6}
+          my={50}
           w={'100%'}
           size={['md', 'md']}
+          bg={'linear-gradient(131.62deg, rgba(0, 196, 177, 1) 0%, rgba(67, 232, 213, 1) 100%)'}
           colorScheme="blue"
           isLoading={requesting}
           onClick={handleSubmit(onclickLogin)}
+          _hover={{
+            background: 'linear-gradient(131.62deg, rgba(0, 196, 177, 1) 0%, rgba(67, 232, 213, 1) 100%)'
+          }}
         >
           {t('Login')}
         </Button>
 
-        {feConfigs?.show_register && (
+        {/* {feConfigs?.show_register && (
           <>
             <Flex align={'center'} justifyContent={'flex-end'} color={'primary.700'}>
               <Box
@@ -162,7 +166,7 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
               </Box>
             </Flex>
           </>
-        )}
+        )} */}
       </Box>
     </FormLayout>
   );

@@ -80,7 +80,7 @@ const MyApps = () => {
   return (
     <PageContainer
       isLoading={myApps.length === 0 && isFetchingApps}
-      insertProps={{ px: folderDetail ? [4, 6] : [4, 10], bg: 'url(/icon/containerBg.png) no-repeat 0 0 / 100% 100%' }}
+      insertProps={{ px: folderDetail ? [4, 6] : [4, 10] }}
     >
       <Flex gap={5}>
         <Box flex={'1 0 0'}>
@@ -90,7 +90,7 @@ const MyApps = () => {
               FirstPathDom={
                 <Flex flex={1} justifyContent={'space-between'} alignItems={'center'}>
                   <Flex flexFlow={'column'}>
-                    <Box letterSpacing={1} fontSize={'40px'} color={'rgba(51, 112, 255, 1)'} fontWeight={'bold'}>
+                    <Box letterSpacing={1} fontSize={'40px'} color={'rgba(2, 189, 170, 1)'} fontWeight={'bold'}>
                       {appT('My Apps')}
                     </Box>
                     <Box letterSpacing={1} fontSize={'36px'} fontWeight={'bold'}>
@@ -109,13 +109,13 @@ const MyApps = () => {
               }}
             />
 
-            {userInfo?.team.permission.hasWritePer && (
+            {userInfo?.team?.permission?.hasWritePer && (
               <MyMenu
                 width={150}
                 iconSize="1.5rem"
                 Button={
-                  <Button leftIcon={<AddIcon />} variant={'primaryOutline'} onClick={onOpenCreateModal} width={'88px'} height={'32px'} background={'linear-gradient(131.62deg, rgba(51, 112, 255, 1) 0%, rgba(130, 168, 255, 1) 100%);'} color={'#fff'} _hover={{
-                    background: 'linear-gradient(131.62deg, rgba(51, 112, 255, 1) 0%, rgba(130, 168, 255, 1) 100%);'
+                  <Button leftIcon={<AddIcon />} variant={'primaryOutline'} onClick={onOpenCreateModal} width={'88px'} height={'32px'} background={'linear-gradient(131.62deg, rgba(0, 196, 177, 1) 0%, rgba(67, 232, 213, 1) 100%)'} color={'#fff'} _hover={{
+                    background: 'linear-gradient(131.62deg, rgba(0, 196, 177, 1) 0%, rgba(67, 232, 213, 1) 100%)'
                   }}>
                     <Box>{t('common.Create New')}</Box>
                   </Button>

@@ -59,7 +59,7 @@ const ListItem = () => {
       try {
         await putAppById(dragId, { parentId: targetId });
         loadMyApps();
-      } catch (error) {}
+      } catch (error) { }
       setLoadingAppId(undefined);
     }
   });
@@ -121,7 +121,7 @@ const ListItem = () => {
               display={'flex'}
               flexDirection={'column'}
               _hover={{
-                borderColor: 'primary.300',
+                borderColor: 'rgba(68, 194, 181, 1)',
                 boxShadow: '1.5',
                 '& .more': {
                   display: 'flex'
@@ -189,35 +189,35 @@ const ListItem = () => {
                             },
                             ...(app.permission.hasManagePer
                               ? [
-                                  {
-                                    icon: 'support/team/key',
-                                    label: t('permission.Permission'),
-                                    onClick: () => setEditPerAppIndex(index)
-                                  }
-                                ]
+                                {
+                                  icon: 'support/team/key',
+                                  label: t('permission.Permission'),
+                                  onClick: () => setEditPerAppIndex(index)
+                                }
+                              ]
                               : [])
                           ]
                         },
                         ...(app.permission.isOwner
                           ? [
-                              {
-                                children: [
-                                  {
-                                    type: 'danger' as 'danger',
-                                    icon: 'delete',
-                                    label: t('common.Delete'),
-                                    onClick: () =>
-                                      openConfirm(
-                                        () => onclickDelApp(app._id),
-                                        undefined,
-                                        app.type === AppTypeEnum.folder
-                                          ? appT('Confirm delete folder tip')
-                                          : appT('Confirm Del App Tip')
-                                      )()
-                                  }
-                                ]
-                              }
-                            ]
+                            {
+                              children: [
+                                {
+                                  type: 'danger' as 'danger',
+                                  icon: 'delete',
+                                  label: t('common.Delete'),
+                                  onClick: () =>
+                                    openConfirm(
+                                      () => onclickDelApp(app._id),
+                                      undefined,
+                                      app.type === AppTypeEnum.folder
+                                        ? appT('Confirm delete folder tip')
+                                        : appT('Confirm Del App Tip')
+                                    )()
+                                }
+                              ]
+                            }
+                          ]
                           : [])
                       ]}
                     />

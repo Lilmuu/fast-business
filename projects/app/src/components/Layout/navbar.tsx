@@ -118,7 +118,7 @@ const Navbar = ({ unread }: { unread: number }) => {
             {...itemStyles}
             {...(item.activeLink.includes(router.pathname)
               ? {
-                color: 'rgba(51, 112, 255, 1)',
+                color: 'rgba(2, 189, 170, 1)',
                 bg: 'white',
                 boxShadow:
                   '0px 0px 1px 0px rgba(19, 51, 107, 0.08), 0px 4px 4px 0px rgba(19, 51, 107, 0.05)'
@@ -169,7 +169,7 @@ const Navbar = ({ unread }: { unread: number }) => {
           </Link>
         </Box>
       )}
-      {(feConfigs?.docUrl || feConfigs?.chatbotUrl) && (
+      {/* {(feConfigs?.docUrl || feConfigs?.chatbotUrl) && (
         <MyTooltip label={t('common.system.Use Helper')} placement={'right-end'}>
           <Link
             {...itemStyles}
@@ -182,8 +182,8 @@ const Navbar = ({ unread }: { unread: number }) => {
             <MyIcon name={'common/courseLight'} width={'24px'} height={'24px'} />
           </Link>
         </MyTooltip>
-      )}
-      {feConfigs?.show_git && (
+      )} */}
+      {/* {feConfigs?.show_git && (
         <MyTooltip label={`Git Star: ${gitStar}`} placement={'right-end'}>
           <Link
             as={NextLink}
@@ -197,7 +197,7 @@ const Navbar = ({ unread }: { unread: number }) => {
             <MyIcon name={'common/gitInlight'} width={'26px'} height={'26px'} />
           </Link>
         </MyTooltip>
-      )}
+      )} */}
     </Flex>
   );
 };
